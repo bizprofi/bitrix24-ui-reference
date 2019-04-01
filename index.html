@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/bitrix/js/ui/alerts/ui.alerts.css"/>
+    <link rel="stylesheet" href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.css"/>
+    <link rel="stylesheet" href="/bitrix/js/ui/buttons/ui.buttons.css"/>
+    <link rel="stylesheet" href="/bitrix/js/ui/buttons/ui.buttons.ie.css"/>
+    <link rel="stylesheet" href="/bitrix/js/ui/icons/ui.icons.css"/>
+    <link rel="stylesheet" href="/bitrix/js/ui/notification/ui.notification.css"/>
+</head>
+<body>
+    <div class="workarea-content-paddings">
+        <style>
+.demo-table { border-collapse: collapse; }
+.demo-table td { border: 1px solid #ddd; padding: 10px; }
+.ui-btn.ui-btn-clock:hover { background-image: var(--ui-btn-clock-loader) !important; }
+.ui-btn.ui-btn-wait:hover { background-image: var(--ui-btn-wait-loader) !important; }
+</style>
+<span class="pagetitle" id="ui-nav">Навигация по странице</span>
+<ul>
+<li><a href="#load-ui">Подключение</a></li>
+<li><a href="#ui.alerts: Алерты разного цвета">ui.alerts: Алерты разного цвета</a></li>
+<li><a href="#ui.alerts: Алерты с иконками">ui.alerts: Алерты с иконками</a></li>
+<li><a href="#ui.alerts: Алерты в разных состояниях">ui.alerts: Алерты в разных состояниях</a></li>
+<li><a href="#ui.fonts: Шрифты">ui.fonts: Шрифты</a></li>
+<li><a href="#ui.buttons: Кнопки разных цветов">ui.buttons: Кнопки разных цветов</a></li>
+<li><a href="#ui.buttons: Кнопки в разных состояниях">ui.buttons: Кнопки в разных состояниях</a></li>
+<li><a href="#ui.buttons: Кнопки разных размеров">ui.buttons: Кнопки разных размеров</a></li>
+<li><a href="#ui.buttons.icons: Кнопки с иконками">ui.buttons.icons: Кнопки с иконками</a></li>
+<li><a href="#ui.icons: Иконки общего назначения">ui.icons: Иконки общего назначения</a></li>
+<li><a href="#ui.icons: Иконки типов файлов">ui.icons: Иконки типов файлов</a></li>
+<li><a href="#ui.icons: Иконки мессенджеров">ui.icons: Иконки мессенджеров</a></li>
+<li><a href="#ui.icons: Иконки квадратные">ui.icons: Иконки квадратные</a></li>
+<li><a href="#ui.icons: Иконки разных размеров">ui.icons: Иконки разных размеров</a></li>
+<li><a href="#ui.notification: Нотификации">ui.notification: Нотификации</a></li>
+</ul>
+<span class="pagetitle" id="load-ui">Подключение</span>
+
+<pre style="border: 1px solid #ddd; display: inline-block; padding: 10px;">&lt;?
+\Bitrix\Main\UI\Extension::load('ui.alerts');
+\Bitrix\Main\UI\Extension::load('ui.fonts');
+\Bitrix\Main\UI\Extension::load('ui.icons');
+\Bitrix\Main\UI\Extension::load('ui.buttons');
+\Bitrix\Main\UI\Extension::load('ui.buttons.icons');
+\Bitrix\Main\UI\Extension::load('ui.notification');
+?&gt;</pre>
+<span class="pagetitle" id="ui.alerts: Алерты разного цвета"><a href="#ui-nav">←</a>ui.alerts: Алерты разного цвета</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-alert ui-alert-default">Дефолтный алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default"&gt;Дефолтный алерт&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-success">Успешный алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-success"&gt;Успешный алерт&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-danger">Опасный алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-danger"&gt;Опасный алерт&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-warning">Предупреждающий алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-warning"&gt;Предупреждающий алерт&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-primary">Основной алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-primary"&gt;Основной алерт&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.alerts: Алерты с иконками"><a href="#ui-nav">←</a>ui.alerts: Алерты с иконками</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-alert ui-alert-default ui-alert-icon-info">Алерт с иконкой инфы</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-icon-info"&gt;Алерт с иконкой инфы&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-default ui-alert-icon-warning">Алерт с иконкой предупреждения</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-icon-warning"&gt;Алерт с иконкой предупреждения&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-default ui-alert-icon-danger">Алерт с иконкой опасности</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-icon-danger"&gt;Алерт с иконкой опасности&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.alerts: Алерты в разных состояниях"><a href="#ui-nav">←</a>ui.alerts: Алерты в разных состояниях</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-alert ui-alert-default">Алерт с кнопкой закрытия <span class="ui-alert-close-btn"></span></span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default"&gt;Алерт с кнопкой закрытия &lt;span class="ui-alert-close-btn"&gt;&lt;/span&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-default ui-alert-text-center">С текстом по центру</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-text-center"&gt;С текстом по центру&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-default ui-alert-xs">Маленький алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-xs"&gt;Маленький алерт&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-alert ui-alert-default ui-alert-md">Стандартный алерт</span></td>
+<td><pre>&lt;span class="ui-alert ui-alert-default ui-alert-md"&gt;Стандартный алерт&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.fonts: Шрифты"><a href="#ui-nav">←</a>ui.fonts: Шрифты</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span style="font-family: 'OpenSans';">Текст стандартного размера</span></td>
+<td><pre>&lt;span style="font-family: 'OpenSans';"&gt;Текст стандартного размера&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span style="font-family: 'OpenSans-Regular';">Текст стандартного размера</span></td>
+<td><pre>&lt;span style="font-family: 'OpenSans-Regular';"&gt;Текст стандартного размера&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span style="font-family: 'OpenSans-Light';">Лёгкий текст</span></td>
+<td><pre>&lt;span style="font-family: 'OpenSans-Light';"&gt;Лёгкий текст&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span style="font-family: 'OpenSans-Semibold';">Тяжёлый текст</span></td>
+<td><pre>&lt;span style="font-family: 'OpenSans-Semibold';"&gt;Тяжёлый текст&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span style="font-family: 'OpenSans-Bold';">Супертяжёлый текст</span></td>
+<td><pre>&lt;span style="font-family: 'OpenSans-Bold';"&gt;Супертяжёлый текст&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.buttons: Кнопки разных цветов"><a href="#ui-nav">←</a>ui.buttons: Кнопки разных цветов</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-btn ui-btn-main">Главная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-main"&gt;Главная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-default">Дефолтная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-default"&gt;Дефолтная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-success">Успешная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-success"&gt;Успешная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-success-light">Успешная светлая кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-success-light"&gt;Успешная светлая кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-danger">Опасная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-danger"&gt;Опасная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-danger-dark">Опасная тёмная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-danger-dark"&gt;Опасная тёмная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-danger-light">Опасная светлая кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-danger-light"&gt;Опасная светлая кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-primary">Синяя кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-primary"&gt;Синяя кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-primary-dark">Тёмно-синяя кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-primary-dark"&gt;Тёмно-синяя кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-secondary">Вторичная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-secondary"&gt;Вторичная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-light">Светлая кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-light"&gt;Светлая кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-light-border">Светлая кнопка с бордером</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-light-border"&gt;Светлая кнопка с бордером&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-link">Ссылка, выглядящая как кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-link"&gt;Ссылка, выглядящая как кнопка&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.buttons: Кнопки в разных состояниях"><a href="#ui-nav">←</a>ui.buttons: Кнопки в разных состояниях</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-btn ui-btn-wait">Кнопка со спиннером</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-wait"&gt;Кнопка со спиннером&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-clock">Кнопка с часами</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-clock"&gt;Кнопка с часами&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-round">Кнопка с закруглёнными краями</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-round"&gt;Кнопка с закруглёнными краями&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-no-caps">Кнопка без капса</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-no-caps"&gt;Кнопка без капса&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn">Кнопка со счётчиком <span class="ui-btn-counter">42</span></span></td>
+<td><pre>&lt;span class="ui-btn"&gt;Кнопка со счётчиком &lt;span class="ui-btn-counter"&gt;42&lt;/span&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-dropdown">Кнопка для выпадающего списка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-dropdown"&gt;Кнопка для выпадающего списка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-disabled">Выключенная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-disabled"&gt;Выключенная кнопка&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.buttons: Кнопки разных размеров"><a href="#ui-nav">←</a>ui.buttons: Кнопки разных размеров</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-btn ui-btn-xs">Минимальная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-xs"&gt;Минимальная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-sm">Маленькая кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-sm"&gt;Маленькая кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-md">Стандартная кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-md"&gt;Стандартная кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-lg">Большая кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-lg"&gt;Большая кнопка&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.buttons.icons: Кнопки с иконками"><a href="#ui-nav">←</a>ui.buttons.icons: Кнопки с иконками</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-btn ui-btn-icon-add-folder">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-add-folder"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-business">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-business"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-business-confirm">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-business-confirm"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-business-warning">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-business-warning"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-add">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-add"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-setting">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-setting"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-unfollow">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-unfollow"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-follow">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-follow"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-task">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-task"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-search">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-search"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-list">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-list"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-print">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-print"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-info">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-info"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-camera">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-camera"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-phone-up">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-phone-up"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-phone-down">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-phone-down"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-start">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-start"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-stop">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-stop"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-back">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-back"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-pause">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-pause"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-cloud">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-cloud"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-download">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-download"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-remove">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-remove"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-share">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-share"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-btn ui-btn-icon-edit">Кнопка</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-icon-edit"&gt;Кнопка&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.icons: Иконки общего назначения"><a href="#ui-nav">←</a>ui.icons: Иконки общего назначения</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-icon ui-icon-common-user"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-user"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-phone"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-phone"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-notification"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-notification"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-user-group"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-user-group"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-company"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-company"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-bitrix24"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-bitrix24"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-cloud"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-cloud"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-folder"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-folder"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-info"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.icons: Иконки типов файлов"><a href="#ui-nav">←</a>ui.icons: Иконки типов файлов</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-icon ui-icon-file-empty"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-empty"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-txt"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-txt"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-doc"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-doc"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-xls"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-xls"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-php"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-php"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-pdf"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-pdf"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-ppt"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-ppt"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-rar"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-rar"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-zip"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-zip"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-set"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-set"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-mov"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-mov"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-img"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-img"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-folder"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-folder"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-folder-shared"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-folder-shared"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-file-folder-shared-2"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-file-folder-shared-2"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.icons: Иконки мессенджеров"><a href="#ui-nav">←</a>ui.icons: Иконки мессенджеров</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-icon ui-icon-service-bitrix24"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-bitrix24"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-instagram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-instagram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-fb-instagram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-fb-instagram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-vk"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-vk"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-livechat"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-livechat"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-skype"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-skype"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-fb"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-fb"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-fb-comments"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-fb-comments"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-fb-messenger"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-fb-messenger"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-viber"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-viber"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-twilio"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-twilio"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-telegram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-telegram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-microsoft"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-microsoft"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-kik"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-kik"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-slack"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-slack"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-groupme"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-groupme"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-outlook"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-outlook"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-webchat"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-webchat"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-directline"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-directline"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-callback"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-callback"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-call"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-call"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-envelope"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-envelope"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-email"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-email"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-webform"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-webform"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-ya-dialogs"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-ya-dialogs"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-apple"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-apple"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-imessage"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-imessage"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-vk-adds"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-vk-adds"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-fb-adds"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-fb-adds"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-vk-order"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-vk-order"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-bitrix24"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-bitrix24"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-instagram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-instagram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-fb-instagram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-fb-instagram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-vk"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-vk"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-livechat"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-livechat"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-skype"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-skype"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-fb"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-fb"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-fb-comments"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-fb-comments"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-fb-messenger"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-fb-messenger"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-viber"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-viber"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-twilio"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-twilio"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-telegram"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-telegram"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-microsoft"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-microsoft"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-kik"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-kik"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-slack"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-slack"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-groupme"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-groupme"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-outlook"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-outlook"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-webchat"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-webchat"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-directline"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-directline"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-callback"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-callback"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-call"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-call"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-email"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-email"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-envelope"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-envelope"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-webform"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-webform"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-ya-dialogs"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-ya-dialogs"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-apple"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-apple"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-imessage"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-imessage"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-service-light-vk-order"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-service-light-vk-order"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.icons: Иконки квадратные"><a href="#ui-nav">←</a>ui.icons: Иконки квадратные</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-icon ui-icon-common-info ui-icon-square"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info ui-icon-square"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.icons: Иконки разных размеров"><a href="#ui-nav">←</a>ui.icons: Иконки разных размеров</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-icon ui-icon-common-info ui-icon-xs"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info ui-icon-xs"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-info ui-icon-sm"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info ui-icon-sm"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-info ui-icon-md"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info ui-icon-md"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+<tr>
+<td><span class="ui-icon ui-icon-common-info ui-icon-lg"><i></i></span></td>
+<td><pre>&lt;span class="ui-icon ui-icon-common-info ui-icon-lg"&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+<span class="pagetitle" id="ui.notification: Нотификации"><a href="#ui-nav">←</a>ui.notification: Нотификации</span>
+<table class="demo-table">
+<tbody><tr>
+<td><span class="ui-btn ui-btn-md" onclick="BX.UI.Notification.Center.notify({content: 'Мой текст нотификации'})">Показать нотификацию</span></td>
+<td><pre>&lt;span class="ui-btn ui-btn-md" onclick="BX.UI.Notification.Center.notify({content: 'Мой текст нотификации'})"&gt;Показать нотификацию&lt;/span&gt;</pre></td>
+</tr>
+</tbody></table>
+</div>
+</body>
