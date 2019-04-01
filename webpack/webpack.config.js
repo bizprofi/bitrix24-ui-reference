@@ -24,7 +24,12 @@ module.exports = {
                             plugins: [
                                 postcss({
                                     url: (asset) => {
+                                        if (asset.url.startsWith('/')) {
+                                            return `/bitrix24-ui-reference${asset.url}`;
+                                        }
+
                                         let documentRoot = path.resolve(__dirname, '../../public_html');
+
                                         return asset.absolutePath.replace(documentRoot, '/bitrix24-ui-reference');
                                     },
                                 }),

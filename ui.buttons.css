@@ -585,7 +585,7 @@ a.ui-btn-double:focus,
 .ui-btn-wait,
 .ui-btn-wait.ui-btn-danger,
 .ui-btn-wait.ui-btn-primary,
-.ui-btn-wait.ui-btn-default { --ui-btn-wait-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/bitrix/js/ui/buttons/images/ui-loader-wait-white.min.svg); }
+.ui-btn-wait.ui-btn-default { --ui-btn-wait-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/images/ui-loader-wait-white.min.svg?v=1.1); }
 
 .ui-btn-wait.ui-btn-danger-dark,
 .ui-btn-wait.ui-btn-success-dark,
@@ -595,7 +595,7 @@ a.ui-btn-double:focus,
 .ui-btn-wait.ui-btn-light,
 .ui-btn-wait.ui-btn-success,
 .ui-btn-wait.ui-btn-light-border,
-.ui-btn-wait.ui-btn-link { --ui-btn-wait-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/bitrix/js/ui/buttons/images/ui-loader-wait-black.min.svg); }
+.ui-btn-wait.ui-btn-link { --ui-btn-wait-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/images/ui-loader-wait-black.min.svg?v=1.1); }
 
 .ui-btn.ui-btn-wait,
 .ui-btn-wait .ui-btn-main { background-image: var(--ui-btn-wait-loader); }
@@ -618,7 +618,7 @@ a.ui-btn-double:focus,
 .ui-btn-clock,
 .ui-btn-clock.ui-btn-danger,
 .ui-btn-clock.ui-btn-primary,
-.ui-btn-clock.ui-btn-default { --ui-btn-clock-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/bitrix/js/ui/buttons/images/ui-loader-clock-white.min.svg); }
+.ui-btn-clock.ui-btn-default { --ui-btn-clock-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/images/ui-loader-clock-white.min.svg?v=1.1); }
 
 .ui-btn-clock.ui-btn-danger-dark,
 .ui-btn-clock.ui-btn-success-dark,
@@ -628,7 +628,7 @@ a.ui-btn-double:focus,
 .ui-btn-clock.ui-btn-light,
 .ui-btn-clock.ui-btn-success,
 .ui-btn-clock.ui-btn-light-border,
-.ui-btn-clock.ui-btn-link { --ui-btn-clock-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/bitrix/js/ui/buttons/images/ui-loader-clock-black.min.svg); }
+.ui-btn-clock.ui-btn-link { --ui-btn-clock-loader: url(/bitrix24-ui-reference/bitrix/js/ui/buttons/images/ui-loader-clock-black.min.svg?v=1.1); }
 
 .ui-btn.ui-btn-clock,
 .ui-btn-clock .ui-btn-main { background-image: var(--ui-btn-clock-loader); }
