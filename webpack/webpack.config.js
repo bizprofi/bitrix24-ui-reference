@@ -49,4 +49,9 @@ module.exports = {
             chunkFilename: '[name].css',
         }),
     ],
+    devServer: {
+        publicPath: '/bitrix24-ui-reference/',
+        compress: true,
+        port: 9000,
+    }
 }
