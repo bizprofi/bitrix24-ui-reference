@@ -1,0 +1,185 @@
+/*region Base style*/
+.ui-alert {
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	padding: 16px 34px 16px 18px;
+	width: 100%;
+	border-radius: 2px;
+	background-color: #e7e8ea;
+	color: #464a4e;
+	vertical-align: middle;
+	font: 14px/17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	opacity: 1;
+	transition: 250ms linear all;
+}
+
+/*endregion*/
+
+.ui-alert-inline { display: inline-flex; }
+
+.ui-alert-text-center { justify-content: center; }
+
+/*region Size*/
+
+.ui-alert-md {
+	padding: 16px 34px 16px 18px;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.ui-alert-xs {
+	padding: 8px 34px 8px 18px;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/*endregion*/
+
+/*region Closed*/
+.ui-alert-close-btn {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	opacity: .4;
+	cursor: pointer;
+	transition: 180ms opacity linear;
+}
+
+.ui-alert-xs .ui-alert-close-btn { top: 7px; }
+
+.ui-alert-close-btn:hover { opacity: .7; }
+
+.ui-alert-close-btn:active { opacity: 1; }
+
+.ui-alert-close-btn:after,
+.ui-alert-close-btn:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	background: #333;
+	content: '';
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ui-alert-close-btn:after {
+	width: 2px;
+	height: 8px;
+}
+
+.ui-alert-close-btn:before {
+	width: 8px;
+	height: 2px;
+}
+
+/*endregion*/
+
+/*region Color*/
+.ui-alert-default {
+	background-color: #e7e8ea;
+	color: #464a4e;
+}
+
+.ui-alert-default .ui-alert-close-btn:after,
+.ui-alert-default .ui-alert-close-btn:before { background-color: #333; }
+
+.ui-alert-success {
+	background-color: #eaf7d7;
+	color: #719100;
+}
+
+.ui-alert-success .ui-alert-close-btn:after,
+.ui-alert-success .ui-alert-close-btn:before { background-color: #719100; }
+
+.ui-alert-danger {
+	background-color: #fae5e8;
+	color: #d0021b;
+}
+
+.ui-alert-danger .ui-alert-close-btn:after,
+.ui-alert-danger .ui-alert-close-btn:before { background-color: #d0021b; }
+
+.ui-alert-warning {
+	background-color: #f8f4bc;
+	color: #91711e;
+}
+
+.ui-alert-warning .ui-alert-close-btn:after,
+.ui-alert-warning .ui-alert-close-btn:before { background-color: #af9245; }
+
+.ui-alert-primary {
+	background-color: #e1f3f9;
+	color: #1e8ec2;
+}
+
+.ui-alert-primary .ui-alert-close-btn:after,
+.ui-alert-primary .ui-alert-close-btn:before { background-color: #1e8ec2; }
+
+/*endregion*/
+
+/*region Icons*/
+.ui-alert-icon-warning:before {
+	display: inline-block;
+	margin-right: 10px;
+	min-width: 16px;
+	width: 16px;
+	height: 16px;
+	background: no-repeat center url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css);
+	content: '';
+	vertical-align: middle;
+}
+
+.ui-alert-success.ui-alert-icon-warning:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-danger.ui-alert-icon-warning:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-warning.ui-alert-icon-warning:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-primary.ui-alert-icon-warning:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-icon-danger:before {
+	display: inline-block;
+	margin-right: 10px;
+	min-width: 16px;
+	width: 16px;
+	height: 16px;
+	background: no-repeat center url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css);
+	background-size: contain;
+	content: '';
+	vertical-align: middle;
+}
+
+.ui-alert-success.ui-alert-icon-danger:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-danger.ui-alert-icon-danger:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-warning.ui-alert-icon-danger:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-primary.ui-alert-icon-danger:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-icon-info:before {
+	display: inline-block;
+	margin-right: 10px;
+	min-width: 18px;
+	width: 18px;
+	height: 18px;
+	background: no-repeat center url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css);
+	content: '';
+	vertical-align: middle;
+}
+
+.ui-alert-success.ui-alert-icon-info:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-danger.ui-alert-icon-info:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-warning.ui-alert-icon-info:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+.ui-alert-primary.ui-alert-icon-info:before { background-image: url(/bitrix24-ui-reference/bitrix/js/ui/alerts/ui.alerts.css); }
+
+/*endregion*/
+
